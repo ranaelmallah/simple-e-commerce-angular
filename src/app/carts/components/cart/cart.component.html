@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="row">
+        <div class="col-md-12 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col">
+                        <h4><b>Shopping Cart</b></h4>
+                        <p class=""> You have {{cartproducts.length}} items in your cart</p>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!show">
+                <div>
+                    <div class="row main align-items-center ">
+                        <div class="col-2 ">Img</div>
+                        <div class="col-2 text-center ">Title</div>
+                        <div class="col-2 text-center "> price</div>
+                        <div class="col-2 text-center ">quantity</div>
+                        <div class="col-2 text-center ">Total price</div>
+                    </div>
+                    <div class="row border-top border-bottom " *ngFor="let item of cartproducts;let index=index ">
+                        <div class="row main align-items-center ">
+                            <div class="col-2 "><img class="img-fluid " src='{{item.item.image}}'></div>
+                            <div class="col-2 ">
+                                <div class="row text-muted ">{{item.item.title}}</div>
+                            </div>
+                            <div class="col-2 text-center "> {{item.item.price}} LE<span class="close "></span></div>
+                            <div class="col-2 d-flex ">
+                                <button class="btn btn-dark " (click)="addamount(index) ">+</button>
+                                <input type="number" min="1 " [(ngModel)]="item.quantity " (change)="detectchange() ">
+                                <button class="btn " (click)="minamount( index) ">-</button>
+                            </div>
+                            <div class="col-2 text-center "> {{item.item.price*item.quantity }} LE<span class="close "></span></div>
+                            <button class=" p-2  delete m-2 b-0 col-1  " (click)="deleteitem(index)">Delete</button>
+                        </div>
+
+                    </div>
+                    <div class=" "><b>Total:</b>{{total}} LE</div>
+                    <button class=" p-2 order m-2 b-0 col-3  " (click)="addcart()">Order Now </button>
+
+                    <button class=" p-2 clear  m-2 b-0 col-3  " (click)="clearitems();noitem()">Claer Shopping cart </button>
+                </div>
+            </div>
+
+            <div class="text-center " *ngIf="show">
+                <h2>" Your cart Is Empty "</h2>
+                <button class=" p-2 bg-black text-light btn-dark m-2 b-o " routerLink="/Prouduct ">shop now</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="alert alert-success" role="alert" *ngIf="sucess"> <b> Well done!Your order was successfly sent!</b> </div>

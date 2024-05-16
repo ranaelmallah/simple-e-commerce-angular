@@ -1,0 +1,19 @@
+<div class="item card m-1 p-4  ">
+    <div routerLink="/details/{{data.id}} ">
+        <img class=" " [src]=" data.image " alt="Card image cap ">
+        <div class="talk text-center ">
+            <h4 class="text-center "><b>{{data.title}}</b> </h4>
+            <p class="desc ">{{data.description}}</p>
+        </div>
+    </div>
+    <div class="mb-1 d-flex align-items-center justify-content-between ">
+        <button *ngIf="!addbutton " class="btne p-2 " (click)="addbutton=true ">Add to cart</button>
+        <div class="d-flex w-50 justify-content-between " *ngIf="addbutton ">
+            <input type="number" class="form-control " [(ngModel)]="amount " min="1">
+            <button class="btn btn-dark " (click)="add();addbutton=false "> add</button>
+
+        </div>
+        <span class=" price ">{{data.price}} EGP</span>
+    </div>
+    <!-- <button class=" details nav-link btn btn-danger " routerLink="/details/{{data.id}} ">details {{data.id}}</button> -->
+</div>
