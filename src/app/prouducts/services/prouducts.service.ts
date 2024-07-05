@@ -19,4 +19,11 @@ export class ProuductsService {
    getproductbyId(id:any){
     return this._HttpClient.get('https://fakestoreapi.com/products/'+id)
    }
+   getHomeProducts(){
+    return this._HttpClient.get('https://fakestoreapi.com/products/category/jewelery')
+
+   }
+
+
 }
+

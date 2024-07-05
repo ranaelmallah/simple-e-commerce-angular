@@ -1,3 +1,49 @@
-a {
-    cursor: pointer;
+/*======================================
+	01. Header CSS
+========================================*/
+
+.header.shop .header-inner {
+    background: #333;
 }
+
+.header.shop .nav li {
+    margin-right: 40px;
+    float: left;
+    position: relative;
+}
+
+.header.shop .nav li {
+    margin-right: 5px;
+    position: relative;
+    float: none;
+}
+
+.header.shop .nav li a {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    padding: 20px 15px;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.header .header-inner {
+    width: 100%;
+    z-index: 999;
+}
+
+.active,
+.header.shop .nav li:hover a {
+    background-color: #F7941D;
+    color: #fff;
+}
+
+
+/*======================================
+End Header CSS
+========================================*/

@@ -1,0 +1,42 @@
+/* start of why section */
+
+.why_section {
+    margin-top: 100px;
+}
+
+.why_section .box {
+    text-align: center;
+    margin: 45px 0px;
+    background-color: #f9f8f7;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.why_section .box .img-box {
+    margin-bottom: 15px;
+}
+
+.why_section .box .img-box svg {
+    width: 55px;
+    height: auto;
+    fill: #320b57;
+}
+
+h2 {
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    width: 100px;
+    position: absolute;
+    margin: 0 auto;
+    height: 3px;
+    background: #F7941D;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+}
+
+
+/* end of why section */

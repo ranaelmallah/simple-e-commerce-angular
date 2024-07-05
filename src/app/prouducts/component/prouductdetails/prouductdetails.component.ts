@@ -12,7 +12,7 @@ export class ProuductdetailsComponent {
   id:any
   data:any={}
   loading:boolean=false;
-
+  cartproducts:any[]=[];
 constructor(private route :ActivatedRoute ,private ProuductsService:ProuductsService){
 this.id=this.route.snapshot.paramMap.get("id")
 console.log(this.id)
@@ -32,4 +32,7 @@ getproduct(){
 })
   console.log(this.data)
 }
+
+
+
 }

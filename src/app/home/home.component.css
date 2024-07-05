@@ -1,0 +1,64 @@
+* {
+    /* outline: 2px solid red; */
+}
+
+
+/* start of header */
+
+.mainHeaader {
+    width: 100%;
+    background-color: #feead2;
+    height: 85vh;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.content {
+    margin: auto;
+}
+
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: #feead2;
+    border: none;
+}
+
+img {
+    float: right;
+    height: 300px;
+    margin: auto;
+}
+
+
+/* start saving section */
+
+.saving_section .box {
+    text-align: center;
+    padding: 45px;
+    background-color: #F7941D;
+    color: #ffffff;
+    background-attachment: fixed;
+}
+
+.saving_section .row {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.saving_section .detail-box {
+    padding: 0 25px;
+}
+
+.saving_section .detail-box p {
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: white;
+    color: #F7941D;
+}
+
+
+/* End of saving section */

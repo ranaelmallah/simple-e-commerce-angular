@@ -8,7 +8,8 @@ import { HttpClientXsrfModule } from '@angular/common/http';
 import { ProductComponent } from './component/product/product.component';
 // import { AppRoutingModule } from  '../app-routing.module';
 import { FormsModule } from '@angular/forms';
-// import { CartComponent } from '../carts/components/cart/cart.component';
+import { HomeProductComponent } from './homeProducts/home-product/home-product.component';
+
 
 
 @NgModule({
@@ -16,15 +17,21 @@ import { FormsModule } from '@angular/forms';
     AllprouductsComponent,
     ProuductdetailsComponent,
     ProductComponent,
-    // CartComponent
+    HomeProductComponent,
+
   ],
   imports: [
     CommonModule,
     SharedModule,
-    // FormsModule,
+    FormsModule,
     // RouterModule,
     // AppRoutingModule
 
- ]
+ ],exports: [
+  ProductComponent
+  ,AllprouductsComponent,
+  HomeProductComponent
+
+]
 })
 export class ProuductsModule { }

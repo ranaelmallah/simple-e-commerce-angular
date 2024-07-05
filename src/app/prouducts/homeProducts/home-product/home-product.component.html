@@ -1,0 +1,22 @@
+<div class=" row ">
+    <h2 class="mt-5 text-center">Our Products </h2>
+    <div class="single-product col-3 item" *ngFor="let item of homeProduct">
+        <div class="product-img" routerLink="/details/{{item.id}}">
+            <img class=" default-img mt-4 " [src]="item.image " alt="# ">
+            <div class="button-head ">
+                <div class="product-action-2 ">
+                    <a title="Add to cart " routerLink="/details/{{item.id}}">View Product</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-content text-center mb-3 ">
+            <h3> <a routerLink="/details/{{item.id}}">{{item.title}}</a> </h3>
+            <div class="product-price "><span>{{item.price}}</span> EGP</div>
+        </div>
+    </div>
+    <button type="button" class=" butt " routerLink="/Prouduct"> See All Products </button>
+</div>
+
+<div class="text-center w-100" *ngIf="loading">
+    <app-spinner></app-spinner>
+</div>
