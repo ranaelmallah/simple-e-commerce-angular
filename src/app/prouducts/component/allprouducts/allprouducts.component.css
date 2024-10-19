@@ -1,3 +1,28 @@
-    * {
-        /* outline: 2px solid red; */
-    }
+                        * {
+                            /* outline: 2px solid red; */
+                        }
+
+                        .header {
+                            background-color: #c5bfb3;
+                            height: 300px;
+                            background-image: url("Untitled.jpg");
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            background-size: cover;
+                        }
+
+                        h1 {
+                            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                            font-weight: 900;
+                            padding: 60px 0px 0px 100px;
+                        }
+
+                        .shop {
+                            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                            margin-left: 100px;
+                            padding: 10px 50px;
+                            border: 0px;
+                            background-color: black;
+                            color: white;
+                        }

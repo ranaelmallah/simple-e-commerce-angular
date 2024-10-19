@@ -1,9 +1,14 @@
-<div class="box mt-4 container">
+<!-- <div class="header">
+    <h1 class="">Select <br>Your prefect <br> New Style </h1>
+    <button class="shop " routerLink="/Prouduct ">shop now</button>
+</div> -->
+<div class="box mt-4">
     <div class="col-3 ">
         <app-select [data]="catagories" [title]="'Categories'" (selectedValue)="filtercatagory($event)"></app-select>
     </div>
     <div class="row mt-1" *ngIf="!loading">
         <div class=" col-lg-3 col-md-4 col-sm-12" *ngFor="let item of allproduct">
+            <!-- <button class="nav-link btn btn-danger" routerLink="/details/{{item.id}}">details {{item.id}}</button> -->
             <app-product [data]="item" (item)="addtocart($event)"></app-product>
         </div>
     </div>

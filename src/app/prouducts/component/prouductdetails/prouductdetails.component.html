@@ -6,15 +6,31 @@
         <div class="col-md-7 col-sm-12  ">
             <div class="info">
                 <ul class="list-unstyled">
-                    <li><strong> title: </strong>{{data.title}}</li>
-                    <li> <strong> category:</strong>{{data.category}} </li>
-                    <li><strong> Description: </strong>{{data.Description}} </li>
-                    <li><strong>Rate :</strong>{{data.rating.rate}}</li>
-                    <li><strong>count: </strong>{{data.rating.count}} </li>
-                    <li><strong>price:</strong>{{data.price}}LE</li>
+                    <li>
+                        <strong> title: </strong>{{data.title}}
+                    </li>
+                    <li>
+                        <strong> category:
+                            </strong>{{data.category}}
+                    </li>
+                    <li>
+                        <strong> Description:
+                            </strong>{{data.Description}}
+                    </li>
+                    <li>
+                        <strong>Rate :
+                            </strong>{{data.rating.rate}}
+                    </li>
+                    <li>
+                        <strong>count:
+                            </strong>{{data.rating.count}}
+                    </li>
+                    <li>
+                        <strong>price:</strong>{{data.price}}LE
+                    </li>
                 </ul>
+                <button class="btn btn-primary" (click)="changeNext()">NEXT</button>
             </div>
-
         </div>
     </div>
     <div class="text-center w-100 " *ngIf="loading">

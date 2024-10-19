@@ -33,6 +33,7 @@ this.loading=false
 getallcatagory(){
   this._ProuductsService.getallcatagories().subscribe((data) =>{
     this.loading=false
+
         this.catagories= data;
       console.log(this.catagories)})
 }
@@ -66,7 +67,12 @@ console.log(event.item.id)
 }else{
    this.cartproducts.push(event)
     localStorage.setItem("cart",JSON.stringify(this.cartproducts));
-  }
-}
 
+  }
+
+}
+getitemid(itemid:number){
+
+
+}
 }

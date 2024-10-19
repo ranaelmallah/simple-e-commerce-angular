@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ProuductsService } from '../../services/prouducts.service';
 
 
@@ -12,19 +12,27 @@ export class ProuductdetailsComponent {
   id:any
   data:any={}
   loading:boolean=false;
-  cartproducts:any[]=[];
-constructor(private route :ActivatedRoute ,private ProuductsService:ProuductsService){
+
+constructor(private route :ActivatedRoute ,private router :Router ,private ProuductsService:ProuductsService){
 this.id=this.route.snapshot.paramMap.get("id")
 console.log(this.id)
+
 }
 ngOnInit() {
-  this.getproduct();
+  // this.getproduct(  productId :Number)
+  this.route.params.subscribe((res:Params)=>{
+    const productId = Number(res['id'])
+    this.getproduct(productId)
+     console.log(`param ${res['id']}`)
+   })
+
 }
-getproduct(){
+getproduct(productId:number){
   this.loading = true ;
   this.ProuductsService.getproductbyId(this.id).subscribe((res)=>{
   this.loading = false ;
     this.data=res
+
   }
 ,error=>{
   this.loading = false ;
@@ -32,7 +40,7 @@ getproduct(){
 })
   console.log(this.data)
 }
-
-
-
+changeNext(){
+  this.router.navigate(['details/7'])
+}
 }
